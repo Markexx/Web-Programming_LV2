@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+
 const app = express();
 
 // Postavljanje EJS-a
@@ -12,13 +13,24 @@ app.use(express.static('public'));
 
 // Početna ruta
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html')); // po potrebi
+    // Ako imaš index.html u public, posluži ga
+    const indexPath = path.join(__dirname, 'public', 'index.html');
+    if (fs.existsSync(indexPath)) {
+        res.sendFile(indexPath);
+    } else {
+        res.send('<h1>Dobrodošli na moju web stranicu!</h1><p><a href="/slike">Galerija</a></p>');
+    }
 });
 
 // Ruta za galeriju
 app.get('/slike', (req, res) => {
     const folderPath = path.join(__dirname, 'public', 'images');
-    const files = fs.readdirSync(folderPath);
+    let files = [];
+
+    // Provjera da mapa postoji
+    if (fs.existsSync(folderPath)) {
+        files = fs.readdirSync(folderPath);
+    }
 
     const images = files
         .filter(file => file.endsWith('.jpg') || file.endsWith('.png'))
@@ -28,10 +40,12 @@ app.get('/slike', (req, res) => {
             title: `Slika ${index + 1}`
         }));
 
+    // Renderanje EJS predloška
     res.render('slike', { images });
 });
 
-// Pokretanje servera
-app.listen(3000, () => {
-    console.log("Server pokrenut na http://localhost:3000");
+// Pokretanje servera na dinamičkom portu
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server pokrenut na portu ${PORT}`);
 });
