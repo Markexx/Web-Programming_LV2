@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Laboratorijska vježba 1 - Baza podataka o filmovima 2024/2025.">
+    <link rel="stylesheet" href="style.css">
+    <title>Filmska Arhiva | Početna</title>
+</head>
+<body>
+
+    <header>
+        <h1>Filmska Arhiva 2024/2025</h1>
+    </header>
+
+    <nav aria-label="Glavna navigacija">
+        <ul class="nav-links">
+            <li><a href="index.html">Početna</a></li>
+            <li class="dropdown">
+                <button class="dropbtn">Pregled ▾</button>
+                <ul class="dropdown-content">
+                    <li><a href="grafikon.html">Grafički prikaz</a></li>
+                    <li><a href="slike.html">Galerija slika</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="main-grid">
+        
+        <div class="content-left">
+            <section class="table-container">
+                <h2>Popis filmova s osnovnim informacijama</h2>
+                <div class="scroll-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Naslov</th>
+                                <th>Godina</th>
+                                <th>Žanr</th>
+                                <th>Trajanje</th>
+                                <th>Država</th>
+                                <th>Ocjena</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>2</td><td>Bugs Bunny's Third Movie</td><td>1982</td><td>Animacija</td><td>76</td><td>SAD</td><td>7.7</td></tr>
+                            <tr><td>3</td><td>18 anni tra una settimana</td><td>1991</td><td>Drama</td><td>98</td><td>Italija</td><td>6.5</td></tr>
+                            <tr><td>17</td><td>Ride a Wild Pony</td><td>1976</td><td>Romantični</td><td>91</td><td>SAD</td><td>5.7</td></tr>
+                            <tr><td>18</td><td>Diner</td><td>1982</td><td>Komedija</td><td>95</td><td>SAD</td><td>7.0</td></tr>
+                            <tr><td>20</td><td>A che servono questi quattrini?</td><td>1942</td><td>Komedija</td><td>85</td><td>Italija</td><td>5.9</td></tr>
+                            <tr><td>22</td><td>A ciascuno il suo</td><td>1967</td><td>Drama</td><td>93</td><td>Italija</td><td>7.6</td></tr>
+                            <tr><td>23</td><td>Dead-Bang</td><td>1989</td><td>Krimić</td><td>109</td><td>SAD</td><td>6.0</td></tr>
+                            <tr><td>24</td><td>A... come assassino</td><td>1966</td><td>Triler</td><td>80</td><td>Italija</td><td>5.2</td></tr>
+                            <tr><td>26</td><td>At Close Range</td><td>1986</td><td>Drama</td><td>115</td><td>SAD</td><td>7.5</td></tr>
+                            <tr><td>30</td><td>A Ghentar si muore facile</td><td>1968</td><td>Avantura</td><td>101</td><td>Italija</td><td>4.8</td></tr>
+                            <tr><td>32</td><td>Sleeping with the Enemy</td><td>1990</td><td>Drama</td><td>96</td><td>SAD</td><td>5.0</td></tr>
+                            <tr><td>34</td><td>In Bed With Madonna</td><td>1990</td><td>Dokumentarni</td><td>111</td><td>SAD</td><td>5.3</td></tr>
+                            <tr><td>36</td><td>Bowery at Midnight</td><td>1942</td><td>Horor</td><td>62</td><td>SAD</td><td>5.1</td></tr>
+                            <tr><td>37</td><td>A mezzanotte va la ronda del piacere</td><td>1975</td><td>Komedija</td><td>100</td><td>Italija</td><td>5.8</td></tr>
+                            <tr><td>38</td><td>Mr. Majestyk</td><td>1974</td><td>Akcija</td><td>105</td><td>SAD</td><td>6.2</td></tr>
+                            <tr><td>45</td><td>Warning Sign</td><td>1985</td><td>Akcija</td><td>99</td><td>SAD</td><td>4.8</td></tr>
+                            <tr><td>47</td><td>About Last Night</td><td>1986</td><td>Komedija</td><td>113</td><td>SAD</td><td>5.9</td></tr>
+                            <tr><td>49</td><td>Fail-Safe</td><td>1964</td><td>Drama</td><td>110</td><td>SAD</td><td>8.2</td></tr>
+                            <tr><td>51</td><td>Some Like It Hot</td><td>1959</td><td>Komedija</td><td>120</td><td>SAD</td><td>9.1</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="analysis">
+                <h2>Analiza kolekcije</h2>
+                <p>Ova baza podataka sadrži klasike svjetske kinematografije, s posebnim naglaskom na američku i talijansku produkciju prošlog stoljeća.</p>
+            </section>
+        </div>
+
+        <aside class="sidebar-right">
+            <article>
+                <h3>Istaknuti vizual</h3>
+                <picture role="img" aria-label="Filmska oprema ili poster">
+                    <source media="(min-width: 1024px)" srcset="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=500">
+                    <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=300" 
+                         alt="Filmska klapa i projektor" class="interactive-img">
+                </picture>
+                <p>Prikaz klasične filmske opreme koja simbolizira zlatno doba kinematografije.</p>
+                <a href="slike.html" class="btn-more">Pogledaj galeriju</a>
+            </article>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026. Web Programiranje. Sva prava pridržana.</p>
+    </footer>
+
+</body>
+</html>
