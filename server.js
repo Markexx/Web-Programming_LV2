@@ -1,17 +1,14 @@
 const express = require('express');
 const app = express();
 
-// OBAVEZNO za Railway
-const PORT = process.env.PORT || 3000;
-
-// serviranje statičkih datoteka
+// posluživanje statičkih datoteka iz "public"
 app.use(express.static('public'));
 
-// fallback (nije obavezno)
+// fallback ruta
 app.get('/', (req, res) => {
-    res.send('Pozdrav sa Railway servera!');
+    res.send("Ili obican tekst ako nema HTML datoteke.");
 });
 
-app.listen(PORT, () => {
-    console.log(`Server pokrenut na portu ${PORT}`);
+app.listen(3000, () => {
+    console.log("Server pokrenut na http://localhost:3000");
 });
